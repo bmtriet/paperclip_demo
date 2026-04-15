@@ -1,171 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paperclip Demo | Features</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#436b58",
+                        "primary": "#006e2e",
+                        "surface-dim": "#d9dbd3",
+                        "tertiary-fixed": "#ffdcbd",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e9e1",
+                        "tertiary-container": "#bf9062",
+                        "outline-variant": "#bccbb9",
+                        "surface-variant": "#e2e3db",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#274e3d",
+                        "surface-container": "#edefe7",
+                        "secondary": "#3f6653",
+                        "primary-container": "#00b14f",
+                        "on-tertiary-container": "#492a04",
+                        "secondary-fixed-dim": "#a5d0b9",
+                        "tertiary": "#7d562d",
+                        "outline": "#6d7b6c",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2f312c",
+                        "secondary-fixed": "#c1ecd4",
+                        "inverse-on-surface": "#f0f1e9",
+                        "on-tertiary-fixed-variant": "#623f18",
+                        "surface-container-highest": "#e2e3db",
+                        "error": "#ba1a1a",
+                        "background": "#f9faf2",
+                        "tertiary-fixed-dim": "#f0bd8b",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-background": "#1a1c18",
+                        "on-surface-variant": "#3d4a3d",
+                        "secondary-container": "#beead1",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#52e078",
+                        "surface-tint": "#006e2e",
+                        "primary-fixed": "#71fe91",
+                        "on-primary-fixed": "#002109",
+                        "primary-fixed-dim": "#52e078",
+                        "on-surface": "#1a1c18",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#002114",
+                        "surface-container-low": "#f3f4ec",
+                        "surface": "#f9faf2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#003a15",
+                        "on-primary-fixed-variant": "#005321",
+                        "surface-bright": "#f9faf2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #006e2e 0%, #00b14f 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
 </head>
-<body data-page="features">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Paperclip Demo home">
-        <span class="brand-name">Paperclip Demo</span>
-        <span class="brand-meta">Prototype v1</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" data-nav="home">Home</a></li>
-          <li><a href="features.html" data-nav="features">Features</a></li>
-          <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
-          <li><a href="contact.html" data-nav="contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main" class="page-shell">
-    <section class="hero container">
-      <div class="hero-layout">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Feature architecture</p>
-          <h1>Structure the core workflows around clarity, state, and handoff.</h1>
-          <p class="section-intro">
-            The feature page explains how the product is organized and why the prototype supports a faster review loop for design and engineering.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="pricing.html">See commercial structure</a>
-            <a class="btn secondary" href="index.html">Back to overview</a>
-          </div>
+<body class="bg-background text-on-background font-body">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 dark:bg-[#1a1c18]/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1440px] mx-auto">
+<div class="text-2xl font-bold tracking-tight text-[#006e2e] dark:text-[#00b14f] font-['Noto_Serif']">
+                Cao Thảo Dược Họ Vương
+            </div>
+<nav class="hidden md:flex items-center space-x-8 font-['Noto_Serif'] font-bold text-lg">
+<a class="text-[#006e2e] dark:text-[#00b14f] border-b-2 border-[#006e2e] dark:border-[#00b14f] pb-1 hover:text-[#00b14f] transition-colors duration-300" href="features.html">Sản Phẩm</a>
+<a class="text-[#1a1c18] dark:text-[#e2e3dc] opacity-80 hover:text-[#00b14f] transition-colors duration-300" href="pricing.html">Về Chúng Tôi</a>
+<a class="text-[#1a1c18] dark:text-[#e2e3dc] opacity-80 hover:text-[#00b14f] transition-colors duration-300" href="contact.html">Tư Vấn</a>
+<a class="text-[#1a1c18] dark:text-[#e2e3dc] opacity-80 hover:text-[#00b14f] transition-colors duration-300" href="contact.html">Liên Hệ</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-outline mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Tìm kiếm thảo dược..." type="text"/>
+</div>
+<button class="hero-gradient text-on-primary px-6 py-2.5 rounded-xl font-semibold scale-95 duration-200 transition-transform hover:scale-100 shadow-md">
+                    Đặt Lịch Hẹn
+                </button>
+</div>
+</div>
+<div class="bg-[#f3f4ec] dark:bg-[#2e312c] h-[1px] w-full absolute bottom-0"></div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative py-24 px-8 overflow-hidden bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6">Tinh Hoa Y Học Cổ Truyền</span>
+<h1 class="text-6xl md:text-7xl font-headline font-bold text-on-surface leading-tight mb-8">
+                        Dược Liệu Quý <br/>
+<span class="text-primary italic font-normal">Cho Sức Khỏe Vàng</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        Kế thừa những bài thuốc bí truyền từ dòng họ Vương, kết hợp cùng quy trình chiết xuất hiện đại để mang lại giải pháp điều trị an toàn và hiệu quả từ thiên nhiên.
+                    </p>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-full bg-primary/5 absolute -top-12 -right-12 w-full h-full blur-3xl"></div>
+<img alt="Traditional Herbal Medicine" class="relative z-10 w-full h-[500px] object-cover rounded-[2rem] shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700" data-alt="Close-up of dried herbs, cinnamon sticks, and star anise arranged artistically on a vintage ceramic plate with soft directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTz0Fi8Uw_H9I5ITeH-1mqYqx6WIQYYLNm67HQaeJHiqOsYbMp3x8pKrghkz9t6wJZaCD20bnwGWp9PDTnM4rpfyDgLwUhppKUBeDtcKpF_ce6swrvmVxBg75W6cnYTiPsEG_psNxSPP3q2PWSCKaIlU5kkSJib7Ii5m2TBm85X25zzfLrB_cqN_J9kWiDxT1QdckYLvfjUAeBLeZ94maasNb_jAoCPZDply0N-knX6hAYLbkdIMkeXm_nEjVQm4rZ7HHenfb4uRI"/>
+<div class="absolute -bottom-6 -left-6 z-20 bg-surface-container-lowest p-6 rounded-xl shadow-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="verified">verified</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">100% Tự Nhiên</p>
+<p class="text-xs text-on-surface-variant">Chứng nhận bởi Bộ Y Tế</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters & Navigation -->
+<section class="py-12 px-8 bg-surface">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+<div>
+<h2 class="text-4xl font-headline font-bold text-on-surface mb-4">Danh Mục Sản Phẩm</h2>
+<div class="h-1 w-20 bg-primary"></div>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-medium transition-all shadow-lg shadow-primary/20">Tất Cả</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all">Xương Khớp</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all">Tiêu Hóa</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all">An Thần</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all">Bồi Bổ Cơ Thể</button>
+</div>
+</div>
+<!-- Product Grid - Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Cao Xương Khớp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Professional studio shot of a dark glass jar of herbal paste on a wooden pedestal with green leaf accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDn417frN2hnYw33olSPxfQ5dLX57VL0k5Ky8exSThWF9tGBdm-KP9qnhK86Qb-kiGSE3efbTEJTCPBREPOZ3pVffHaoZaNL6oghOzSLTa9K2yNuNBL7nGpEFWeHKDHMMS2mo2KATitTK58P1aW_n_pB8Ha2Twd6d5HewLXIu01JTFyoZThdC_HsFY0n5156Dfs5oE28aWFwupvxD3In5ndQdSPwmyErALemT3_pbKrDF_MrE1_HW2Ao2w5R7mM28A0LaiN3tAwQZ_"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<span class="text-tertiary font-label text-xs font-bold uppercase tracking-widest">Xương Khớp</span>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors" data-icon="eco">eco</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Cao Bách Thảo Họ Vương</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                                Hỗ trợ giảm đau nhức xương khớp, tê bì tay chân và phục hồi sụn khớp từ 12 vị thảo dược quý hiếm.
+                            </p>
+<a class="inline-flex items-center text-primary font-bold text-sm uppercase tracking-wider group/link" href="#">
+                                Xem Chi Tiết
+                                <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Trà An Thần" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Warm atmospheric shot of dried chamomile and lavender blossoms in a rustic ceramic bowl with soft steam rising" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ-57rVB8EicsvBktEiT34bWqNXtOEAbwA5gA5IhU4GQ9-3UkC2485ZJy0Am-i49TQogpluWt2M9bbeJ5pLUEtwFqany9vKI8eVaAB_QEHI36qmHGaIK4xWdgIUjLJwpH1aT789lRU6N8nkQLyKnqyPXRWHL9ESlUXqgsb2qD8qGpTmsex9_OHG4o4TrNDHRgRgheZ_k5r_nk_oXFHj06Eof2fJHwzLBqOaLtFPMY4wBkiaUFFO2nQqjgtAfADOl_JywdeTJqMUiGM"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<span class="text-tertiary font-label text-xs font-bold uppercase tracking-widest">An Thần</span>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors" data-icon="dark_mode">dark_mode</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Trà Dưỡng Tâm Vương</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                                Giải tỏa căng thẳng, cải thiện giấc ngủ sâu và hỗ trợ ổn định huyết áp cho người cao tuổi.
+                            </p>
+<a class="inline-flex items-center text-primary font-bold text-sm uppercase tracking-wider group/link" href="#">
+                                Xem Chi Tiết
+                                <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Cao Tiêu Hóa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Macro photo of fresh ginger and turmeric roots on a clean stone surface with a small porcelain bowl of extract" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvY3A8Ep_vMXZMobeXbPjm_4h9P7psm0GGXWm0RF--66IIhqQPlfPj3RZtIdpmNt7P0a1eKaRnkw4xwapOYiLBdgojtEJ6hsISl1Qqy02l4ShjNjvGovKmCWbgRPhA9gGGGvWt-p72j44pNcFfHj4Pi3UqNO3JnrkHEWyp5HAQva_Y8vzNMlooFJiuwc-QJvM4xDofw6nghMM289greyC0fgZ-RRl1Zmk8SxvLI_BqTPiGwzIKOTfnFLEPMR56ClL04jxRvW2HwgJo"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<span class="text-tertiary font-label text-xs font-bold uppercase tracking-widest">Tiêu Hóa</span>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors" data-icon="medical_services">medical_services</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Cao Kiện Tỳ Vị</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                                Hỗ trợ điều trị đau dạ dày, tá tràng và kích thích tiêu hóa tự nhiên bằng phương pháp cô đọng truyền thống.
+                            </p>
+<a class="inline-flex items-center text-primary font-bold text-sm uppercase tracking-wider group/link" href="#">
+                                Xem Chi Tiết
+                                <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Highlight Section -->
+<section class="py-24 px-8 bg-surface-container-low overflow-hidden">
+<div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<img alt="Traditional Process" class="w-full rounded-2xl shadow-2xl relative z-10" data-alt="Overhead shot of many small porcelain bowls filled with different colorful medicinal herbs arranged in a perfect grid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuwJHkxu510SZgf6dk8U-xmumBeH9Y_5Sf7WGKQ1IZfibFgPwGYaxxw73H9rTwZhR1PTrk-EmpMZ06745Nud4_9VtxAF0fLTA9my1CO-GJfZ38357qdEBgz4Y0z4e-XbjRYbFwlE_F54fLVJ_8F4pR4KyOGIlQj82oQdDL4zSlZgNC5JzD0hxG4IqChqJbTO4AuS5StgCTRZ_qF6WiJ1YydIg3XnymAkRiAuU-Z3i2yI3wu5zUomPRMHwnFwzHQdtIH8PLxaFd34p3"/>
+<div class="absolute -top-10 -right-10 w-48 h-48 bg-primary/10 rounded-full blur-2xl"></div>
+</div>
+<div>
+<h2 class="text-5xl font-headline font-bold text-on-surface mb-12 leading-tight">Quy trình bào chế <br/> Đạt chuẩn GACP</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-surface mb-2">Trí Tuệ Cổ Truyền</h4>
+<p class="text-on-surface-variant">Kết tinh từ hàng trăm năm kinh nghiệm bốc thuốc cứu người của dòng họ Vương danh tiếng.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="biotech">biotech</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-surface mb-2">Công Nghệ Hiện Đại</h4>
+<p class="text-on-surface-variant">Hệ thống chiết xuất chân không giúp giữ trọn vẹn dược tính của các hoạt chất quý trong thảo dược.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="shield_check">shield</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-surface mb-2">Kiểm Định Nghiêm Ngặt</h4>
+<p class="text-on-surface-variant">Mọi lô sản phẩm đều được kiểm nghiệm dư lượng kim loại nặng và thuốc bảo vệ thực vật.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-24 px-8">
+<div class="max-w-[1440px] mx-auto hero-gradient rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 opacity-10">
+<span class="material-symbols-outlined text-[15rem]" data-icon="potted_plant">potted_plant</span>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-primary mb-6">Nhận tư vấn miễn phí từ chuyên gia</h2>
+<p class="text-on-primary/80 mb-10 text-lg">Để lại thông tin để chúng tôi có thể đồng hành cùng sức khỏe của bạn và gia đình.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-white/10 border-white/20 text-white placeholder:text-white/60 rounded-xl px-6 py-4 focus:ring-primary-container focus:bg-white/20 transition-all outline-none" placeholder="Số điện thoại của bạn" type="tel"/>
+<button class="bg-white text-primary font-bold px-10 py-4 rounded-xl hover:bg-surface-container-lowest transition-colors shadow-lg">Gửi Yêu Cầu</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-[#bccbb9]/20 bg-[#f3f4ec] dark:bg-[#1a1c18]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto font-['Manrope'] text-sm tracking-wide">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-[#006e2e] dark:text-[#00b14f] font-['Noto_Serif'] mb-6">
+                    Cao Thảo Dược Họ Vương
+                </div>
+<p class="text-[#44483e] dark:text-[#c4c8ba] leading-relaxed mb-6">
+                    Đơn vị tiên phong trong việc chuẩn hóa dược liệu và hiện đại hóa y học cổ truyền Việt Nam.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Sản Phẩm</h4>
+<ul class="space-y-4">
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4 transition-opacity" href="#">Dòng Cao Đặc</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4 transition-opacity" href="#">Trà Thảo Mộc</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4 transition-opacity" href="#">Viên Nang Dược Liệu</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4 transition-opacity" href="#">Quà Tặng Sức Khỏe</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Hỗ Trợ</h4>
+<ul class="space-y-4">
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4 transition-opacity" href="#">Câu hỏi thường gặp</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4 transition-opacity" href="#">Chính sách bảo mật</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4 transition-opacity" href="#">Điều khoản sử dụng</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4 transition-opacity" href="#">Hệ thống đại lý</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Liên Hệ</h4>
+<ul class="space-y-4">
+<li class="flex gap-3 text-[#44483e] dark:text-[#c4c8ba]">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+                        123 Đường Thảo Dược, Ba Đình, Hà Nội
+                    </li>
+<li class="flex gap-3 text-[#44483e] dark:text-[#c4c8ba]">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="call">call</span>
+                        1800 6789 (Miễn phí)
+                    </li>
+<li class="flex gap-3 text-[#44483e] dark:text-[#c4c8ba]">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="mail">mail</span>
+                        lienhe@thaoduochovuong.vn
+                    </li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-outline-variant/10 text-center text-[#44483e] dark:text-[#c4c8ba] opacity-80">
+            © 2024 Cao Thảo Dược Họ Vương. Gìn giữ tinh hoa y học cổ truyền.
         </div>
-
-        <aside class="hero-panel reveal" aria-label="Feature summary">
-          <div class="signal-card">
-            <div class="signal-title">Feature principles</div>
-            <ul class="signal-list">
-              <li>Show the workflow before showing the toolset.</li>
-              <li>Keep every section tied to a clear user decision.</li>
-              <li>Prefer concise proof points over decorative filler.</li>
-            </ul>
-          </div>
-          <div class="stat-grid">
-            <div class="stat">
-              <strong>4</strong>
-              <span>Capability pillars</span>
-            </div>
-            <div class="stat">
-              <strong>2</strong>
-              <span>Review states to explain</span>
-            </div>
-            <div class="stat">
-              <strong>1</strong>
-              <span>Primary handoff pattern</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section container reveal" aria-labelledby="pillars-title">
-      <div class="section-title">
-        <p class="section-kicker">Capability pillars</p>
-        <h2 id="pillars-title">The prototype highlights the mechanics that make the product feel usable.</h2>
-        <p class="section-intro">
-          The feature set is intentionally compact so reviewers can understand the interaction model and the value story at a glance.
-        </p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card" data-tone="accent">
-          <h3>Guided task flows</h3>
-          <p>Each journey is framed with a clear starting point, a visible next action, and a low-friction end state.</p>
-        </article>
-        <article class="card">
-          <h3>Status visibility</h3>
-          <p>Progress, ownership, and milestones are surfaced early so teams can scan the page without reading every line.</p>
-        </article>
-        <article class="card">
-          <h3>Lightweight collaboration</h3>
-          <p>The design assumes handoff, comments, and shared context without requiring a heavy admin experience.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container reveal" aria-labelledby="workflow-title">
-      <div class="section-title">
-        <p class="section-kicker">Interaction model</p>
-        <h2 id="workflow-title">The page hierarchy matches how a stakeholder will review the product.</h2>
-        <p class="section-intro">
-          Start with the promise, move through the operating model, then end on the decision that matters most.
-        </p>
-      </div>
-
-      <div class="route-grid">
-        <article class="route-card">
-          <div class="route-index">01</div>
-          <h3>Orient</h3>
-          <p>Use the hero to explain what the prototype is trying to prove and why the page exists.</p>
-        </article>
-        <article class="route-card">
-          <div class="route-index">02</div>
-          <h3>Assess</h3>
-          <p>Use the capability cards to show the structure behind the experience and the product’s distinct value.</p>
-        </article>
-        <article class="route-card">
-          <div class="route-index">03</div>
-          <h3>Decide</h3>
-          <p>Use the CTA and contact path to gather feedback, next steps, or a request for a deeper review.</p>
-        </article>
-        <article class="route-card">
-          <div class="route-index">04</div>
-          <h3>Extend</h3>
-          <p>Keep the component patterns reusable so new pages can be added without changing the system.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container reveal" aria-labelledby="handoff-title">
-      <div class="section-title">
-        <p class="section-kicker">Handoff notes</p>
-        <h2 id="handoff-title">Engineering gets simple rules instead of a vague aesthetic direction.</h2>
-        <p class="section-intro">
-          The page is deliberately component-driven: shared cards, shared CTAs, shared spacing, and a single motion pattern.
-        </p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <h3>Spacing</h3>
-          <p>Use generous section padding, consistent card radius, and a tighter rhythm inside supporting copy blocks.</p>
-        </article>
-        <article class="card">
-          <h3>Motion</h3>
-          <p>Reveal sections once as they enter the viewport and keep the motion subtle enough to avoid distraction.</p>
-        </article>
-        <article class="card">
-          <h3>States</h3>
-          <p>Navigation, focus, and CTA states should stay obvious so the page remains readable and accessible.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="container callout reveal" aria-label="Feature page call to action">
-      <div>
-        <p class="section-kicker">Move next</p>
-        <h2>Review the pricing structure to see how the prototype frames commercial intent.</h2>
-      </div>
-      <a class="btn primary" href="pricing.html">Open pricing</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>Paperclip Demo Prototype</p>
-      <p>&copy; <span id="year"></span> Paperclip</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+</footer>
+</body></html>

@@ -1,135 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paperclip Demo | Contact</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#436b58",
+                    "primary": "#006e2e",
+                    "surface-dim": "#d9dbd3",
+                    "tertiary-fixed": "#ffdcbd",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e8e9e1",
+                    "tertiary-container": "#bf9062",
+                    "outline-variant": "#bccbb9",
+                    "surface-variant": "#e2e3db",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#274e3d",
+                    "surface-container": "#edefe7",
+                    "secondary": "#3f6653",
+                    "primary-container": "#00b14f",
+                    "on-tertiary-container": "#492a04",
+                    "secondary-fixed-dim": "#a5d0b9",
+                    "tertiary": "#7d562d",
+                    "outline": "#6d7b6c",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2f312c",
+                    "secondary-fixed": "#c1ecd4",
+                    "inverse-on-surface": "#f0f1e9",
+                    "on-tertiary-fixed-variant": "#623f18",
+                    "surface-container-highest": "#e2e3db",
+                    "error": "#ba1a1a",
+                    "background": "#f9faf2",
+                    "tertiary-fixed-dim": "#f0bd8b",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#2c1600",
+                    "on-background": "#1a1c18",
+                    "on-surface-variant": "#3d4a3d",
+                    "secondary-container": "#beead1",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#52e078",
+                    "surface-tint": "#006e2e",
+                    "primary-fixed": "#71fe91",
+                    "on-primary-fixed": "#002109",
+                    "primary-fixed-dim": "#52e078",
+                    "on-surface": "#1a1c18",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#002114",
+                    "surface-container-low": "#f3f4ec",
+                    "surface": "#f9faf2",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#003a15",
+                    "on-primary-fixed-variant": "#005321",
+                    "surface-bright": "#f9faf2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 110, 46, 0.05) 0%, rgba(0, 177, 79, 0.05) 100%);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(135deg, #006e2e 0%, #00b14f 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
 </head>
-<body data-page="contact">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Paperclip Demo home">
-        <span class="brand-name">Paperclip Demo</span>
-        <span class="brand-meta">Prototype v1</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" data-nav="home">Home</a></li>
-          <li><a href="features.html" data-nav="features">Features</a></li>
-          <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
-          <li><a href="contact.html" data-nav="contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main" class="page-shell">
-    <section class="hero container">
-      <div class="hero-layout">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Prototype feedback</p>
-          <h1>Use one focused form to capture demos, feedback, and rollout questions.</h1>
-          <p class="section-intro">
-            This page is intentionally simple so the user has one clear next action after reviewing the prototype direction.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#contact-form">Open the form</a>
-            <a class="btn secondary" href="index.html">Return home</a>
-          </div>
-        </div>
-
-        <aside class="hero-panel reveal" aria-label="Contact summary">
-          <div class="signal-card">
-            <div class="signal-title">What to send</div>
-            <ul class="signal-list">
-              <li>Prototype feedback and visual direction notes.</li>
-              <li>Demo requests from stakeholders or engineers.</li>
-              <li>Questions about scope, rollout, or pricing intent.</li>
-            </ul>
-          </div>
-          <div class="stat-grid">
-            <div class="stat">
-              <strong>3</strong>
-              <span>Primary request types</span>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 dark:bg-[#1a1c18]/80 backdrop-blur-md shadow-sm dark:shadow-none h-20">
+<div class="flex justify-between items-center h-full px-8 max-w-[1440px] mx-auto relative">
+<div class="text-2xl font-bold tracking-tight text-[#006e2e] dark:text-[#00b14f] font-['Noto_Serif']">
+                Cao Thảo Dược Họ Vương
             </div>
-            <div class="stat">
-              <strong>1</strong>
-              <span>Form entry point</span>
-            </div>
-            <div class="stat">
-              <strong>0</strong>
-              <span>Extra navigation noise</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="contact-grid container reveal" aria-labelledby="contact-heading">
-      <div class="contact-panel" id="contact-form">
-        <p class="section-kicker">Contact form</p>
-        <h2 id="contact-heading">Start the review conversation.</h2>
-        <p class="section-intro">
-          This form is frontend-only in the prototype. It exists to validate the shape of the intake flow before backend work starts.
-        </p>
-
-        <form class="contact-form" action="#" method="post">
-          <div class="field-group">
-            <label for="name">Name</label>
-            <input class="field" id="name" name="name" type="text" placeholder="Jane Doe" required>
-          </div>
-
-          <div class="field-group">
-            <label for="email">Work email</label>
-            <input class="field" id="email" name="email" type="email" placeholder="jane@company.com" required>
-          </div>
-
-          <div class="field-group">
-            <label for="topic">What do you want to discuss?</label>
-            <input class="field" id="topic" name="topic" type="text" placeholder="Prototype review, demo request, pricing question" required>
-          </div>
-
-          <div class="field-group">
-            <label for="message">Notes</label>
-            <textarea class="field" id="message" name="message" rows="6" placeholder="Tell us what you noticed, what needs to change, or what should be clarified." required></textarea>
-          </div>
-
-          <button type="submit" class="btn primary">Submit request</button>
-        </form>
-      </div>
-
-      <div class="aside-stack">
-        <section class="info-box">
-          <h3>Expected response</h3>
-          <p>The prototype should make it obvious that follow-up happens after the user submits context, not before.</p>
-        </section>
-
-        <section class="info-box">
-          <h3>Review checklist</h3>
-          <ul class="checklist">
-            <li>Does the page structure feel complete?</li>
-            <li>Is the visual direction distinct enough from a default SaaS theme?</li>
-            <li>Is the CTA sequence obvious on mobile and desktop?</li>
-          </ul>
-        </section>
-
-        <section class="info-box">
-          <h3>Routing note</h3>
-          <p>If the contact request needs commercial discussion, route it back through the pricing page flow first.</p>
-        </section>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>Paperclip Demo Prototype</p>
-      <p>&copy; <span id="year"></span> Paperclip</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#1a1c18] dark:text-[#e2e3dc] opacity-80 hover:text-[#00b14f] transition-colors duration-300 font-['Noto_Serif'] font-bold text-lg" href="features.html">Sản Phẩm</a>
+<a class="text-[#1a1c18] dark:text-[#e2e3dc] opacity-80 hover:text-[#00b14f] transition-colors duration-300 font-['Noto_Serif'] font-bold text-lg" href="pricing.html">Về Chúng Tôi</a>
+<a class="text-[#1a1c18] dark:text-[#e2e3dc] opacity-80 hover:text-[#00b14f] transition-colors duration-300 font-['Noto_Serif'] font-bold text-lg" href="contact.html">Tư Vấn</a>
+<a class="text-[#006e2e] dark:text-[#00b14f] border-b-2 border-[#006e2e] dark:border-[#00b14f] pb-1 font-['Noto_Serif'] font-bold text-lg" href="contact.html">Liên Hệ</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-high rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-outline text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-outline" placeholder="Tìm kiếm thảo dược..." type="text"/>
+</div>
+<button class="btn-primary-gradient text-on-primary px-6 py-2.5 rounded-full font-semibold scale-95 duration-200 transition-transform active:scale-90">
+                    Đặt Lịch Hẹn
+                </button>
+</div>
+<div class="bg-[#f3f4ec] dark:bg-[#2e312c] h-[1px] w-full absolute bottom-0 left-0"></div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="hero-gradient py-24 px-8 overflow-hidden">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase">Liên Hệ &amp; Tư Vấn</span>
+<h1 class="text-6xl md:text-7xl font-headline font-bold text-on-surface leading-tight">
+                        Lắng nghe cơ thể, <br/> <span class="text-primary italic">chữa lành</span> tự nhiên.
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Đội ngũ y sĩ tại Cao Thảo Dược Họ Vương luôn sẵn sàng lắng nghe những băn khoăn về sức khỏe của bạn. Hãy để chúng tôi đồng hành cùng bạn trên hành trình phục hồi.
+                    </p>
+</div>
+<div class="relative">
+<div class="w-full aspect-square rounded-full overflow-hidden border-[16px] border-surface-container-lowest shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="Close up of various green medicinal herbs and dry roots arranged artistically on a light linen fabric with soft natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHzd3APS2yg2zUbFyemscFwJU36LXVON3We_3VpSc2j9IEK3sPhvkVYZ2lBzW-ABS2AxZ13WaD1vxvdnq0bS0dI5GyPS0DF1M_DtL0Hx0EUI1XUvEbhdrUSxnSIR3evX3Hmxb100rIobdpnJnYo1Kn7RzLqiKZbFQhimd1k3YvRmuY9HdisfqX74erQNDknMJ0aCcFK0PFvhM8BN5Mini3f8sGrqXegzVq2B_ugwi615lGyNm64xms4uJVnVqWHf0c1ACxTtHi69XC"/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-tertiary-container/20 rounded-full blur-3xl -z-0"></div>
+</div>
+</div>
+</section>
+<!-- Contact & Form Section -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left: Contact Info -->
+<div class="lg:col-span-5 space-y-12">
+<div>
+<h2 class="text-3xl font-headline font-bold mb-8">Thông tin liên hệ</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+</div>
+<div>
+<p class="text-sm font-label font-bold text-tertiary uppercase tracking-widest mb-1">Địa chỉ phòng chẩn trị</p>
+<p class="text-lg text-on-surface">123 Đường Đông Y, Phường Thảo Mộc, <br/>Quận Hoàn Kiếm, Hà Nội</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">call</span>
+</div>
+<div>
+<p class="text-sm font-label font-bold text-tertiary uppercase tracking-widest mb-1">Số điện thoại tư vấn</p>
+<p class="text-lg text-on-surface">0900 123 456<br/>024 3456 7890</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">mail</span>
+</div>
+<div>
+<p class="text-sm font-label font-bold text-tertiary uppercase tracking-widest mb-1">Hòm thư điện tử</p>
+<p class="text-lg text-on-surface">tuvan@caothaoduochovuong.vn</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-3xl overflow-hidden aspect-video bg-surface-container shadow-inner border-4 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Minimalist top down map of a city district with clean green and grey tones" data-location="Hanoi, Vietnam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASbiBPlDFRLae9YBCOR0aFd5-zdWILK-5GTW9oZYIVYyLJk-poGRuGTfSm-PSZb6XB3qgYEE0G5KnFod4eAhdiVpzlh1PlJWt51D8S5t69AI8x6rAvnHq149CYVcrlOytpSj4rStM_1l4f887VAVnLXPKnU_gxpxVvhJRidAvkn9vmeuUZH3Fe2n8bpRJLtSFlud9xhTFKbv_c3D5vE2WCPR6oCEUMzForzLXzM_RRwBekmYaLqPr9NE-_M2jTSW7vOIEr6--_2gVj"/>
+</div>
+</div>
+<!-- Right: Consultation Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-[2rem] p-8 md:p-12 shadow-sm border border-outline-variant/10">
+<div class="mb-10">
+<h2 class="text-3xl font-headline font-bold mb-4">Gửi yêu cầu tư vấn</h2>
+<p class="text-on-surface-variant">Hãy chia sẻ với chúng tôi về tình trạng sức khỏe của bạn để nhận được lời khuyên phù hợp nhất từ các chuyên gia.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-on-surface ml-1">Họ và tên *</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 placeholder:text-outline/50" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-on-surface ml-1">Số điện thoại *</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 placeholder:text-outline/50" placeholder="090 000 0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-on-surface ml-1">Vấn đề sức khỏe cần tư vấn</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface-variant">
+<option>Xương khớp &amp; Đau mỏi</option>
+<option>Mất ngủ &amp; Suy nhược</option>
+<option>Gan mật &amp; Thanh lọc cơ thể</option>
+<option>Tiêu hóa &amp; Dạ dày</option>
+<option>Vấn đề khác</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold font-label text-on-surface ml-1">Mô tả triệu chứng cụ thể</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 placeholder:text-outline/50" placeholder="Ví dụ: Đau khớp gối khi thời tiết thay đổi, đã kéo dài 3 tháng..." rows="4"></textarea>
+</div>
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 rounded-full text-primary focus:ring-primary w-5 h-5 border-outline-variant" type="checkbox"/>
+<span class="text-sm text-on-surface-variant">Tôi đồng ý với chính sách bảo mật thông tin và mong muốn nhận được tư vấn từ y sĩ.</span>
+</div>
+<button class="w-full btn-primary-gradient text-on-primary py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:shadow-xl transition-all" type="submit">
+                                Gửi Yêu Cầu Ngay
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-4xl mx-auto text-center mb-16">
+<h2 class="text-4xl font-headline font-bold mb-6">Câu hỏi thường gặp</h2>
+<p class="text-lg text-on-surface-variant">Những thắc mắc phổ biến về quy trình thăm khám và sử dụng thảo dược.</p>
+</div>
+<div class="max-w-4xl mx-auto space-y-4">
+<!-- FAQ Item -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm group">
+<div class="flex items-center justify-between cursor-pointer">
+<h3 class="text-xl font-bold text-on-surface">Sử dụng cao thảo dược bao lâu thì có hiệu quả?</h3>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant leading-relaxed">
+                        Tùy vào cơ địa và tình trạng bệnh lý, thông thường người bệnh sẽ cảm nhận được sự thay đổi rõ rệt sau 2-4 tuần sử dụng đều đặn theo đúng chỉ dẫn của y sĩ.
+                    </div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm group">
+<div class="flex items-center justify-between cursor-pointer">
+<h3 class="text-xl font-bold text-on-surface">Tôi có thể đặt mua thảo dược gửi về tỉnh xa không?</h3>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant leading-relaxed">
+                        Chúng tôi hỗ trợ tư vấn trực tuyến và gửi sản phẩm qua đường bưu điện đến tận tay quý khách trên toàn quốc trong vòng 2-4 ngày làm việc.
+                    </div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm group">
+<div class="flex items-center justify-between cursor-pointer">
+<h3 class="text-xl font-bold text-on-surface">Có cần phải ăn kiêng khi dùng cao thảo dược không?</h3>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant leading-relaxed">
+                        Mỗi loại thảo dược sẽ có một chế độ ăn uống đi kèm để tối ưu hóa tác dụng. Y sĩ sẽ tư vấn chi tiết danh sách thực phẩm nên dùng và nên kiêng trong buổi tư vấn.
+                    </div>
+</div>
+</div>
+</section>
+<!-- Image Gallery / Visual Support -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Calm Zen-like room with a wooden table, stone bowl, and green leaves for herbal medicine preparation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkUxvXor37dCK-NpstbzFD--MdEhKFCRSwZVO6l-mlQ929oAri1xZH31ejuQq895YHTExj9Imu7I1eeLfzTAez3uE_eirc6ABmAaMhOLOavNBnerqifjYhF-e-tgSlRuqX1PdNQB6PP36BMFD5xu0Qed6qx1oIyJ7XmJbinwKM8MT3wDObKEB8pIjXZKPkR0fFYMQJggu0d3-qZxqozMq9fE2aVvw4usQdZfAwFzlh0z2uWY0HIjVkouawXJUeEfgMSGU6Ynnhtbew"/>
+</div>
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl md:translate-y-12">
+<img class="w-full h-full object-cover" data-alt="A smiling elder traditional doctor in a white robe talking kindly to a patient in a sunlit wooden clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARG40mIRTInniwvLWKwt97BWcbROvZsXlAbhzJI-Nv3AutkVK-JXbeX_KY_58xG-NYQ66BtV65cX3Kd2SNG1pVh1kaE0ToGGJw93TmfULh58lmwAsdqCGd7vDBJ7QnmkmsAj2-J3yz6t_pe5PDRug8DNJpW-hx9qSrNrFjJCIZIAwrgHt8UQBpK7drGQ2BpDt2cYZiGOYWEBZ3JZYNjm5mucjOs9BGQ1zkai98d4VzLqe3rzOlChgc2Ped_ODMhT1_Wd09_uVw4NJl"/>
+</div>
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Macro photo of dark thick herbal extract being poured into a small ceramic bowl with a wooden spoon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6qjIhyrkM4ZElnf3MF4_3XR44Y4UB7Mi5vlZAYRN5cnqtzFxHOlNrOyETXgL44VV_DPwSGXqkdnKlHZiiYBmNItVo2BaPSIpS45yE-wz08-0Epp8QzhN4IhI-aLZBhtDHDLFGt8i4EiZMz4muXoH42XgyfoIcATxtO-zI5laalGyu7BMMt_0tPdyo222dS8KeSeSLvkBEicF4fTLk2M8y0YFQW8pB_xarKkXQzuvyzG6BZRTYCxspAm5dicgy9udv0CSBybCweTwh"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-[#bccbb9]/20 bg-[#f3f4ec] dark:bg-[#1a1c18]">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-6">
+<div class="text-xl font-bold text-[#006e2e] dark:text-[#00b14f] font-['Noto_Serif']">Cao Thảo Dược Họ Vương</div>
+<p class="text-[#44483e] dark:text-[#c4c8ba] text-sm leading-relaxed">
+                    Kế thừa và phát huy những bài thuốc cổ truyền quý giá, mang lại sức khỏe bền vững cho cộng đồng bằng nguồn thảo dược tinh khiết nhất.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary">public</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary">share</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-on-surface font-bold mb-6 font-headline">Liên kết nhanh</h4>
+<ul class="space-y-4 font-['Manrope'] text-sm tracking-wide">
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4" href="features.html">Sản phẩm nổi bật</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4" href="#">Quy trình sản xuất</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4" href="#">Góc sức khỏe</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4" href="pricing.html">Về chúng tôi</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-bold mb-6 font-headline">Hỗ trợ khách hàng</h4>
+<ul class="space-y-4 font-['Manrope'] text-sm tracking-wide">
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4" href="#">Chính sách bảo mật</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4" href="#">Điều khoản sử dụng</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4" href="#">Câu hỏi thường gặp</a></li>
+<li><a class="text-[#44483e] dark:text-[#c4c8ba] hover:underline decoration-[#00b14f] underline-offset-4" href="#">Chính sách giao hàng</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-bold mb-6 font-headline">Bản tin sức khỏe</h4>
+<p class="text-sm text-[#44483e] dark:text-[#c4c8ba] mb-4">Đăng ký để nhận những lời khuyên hữu ích từ y sĩ định kỳ.</p>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-full py-3 px-6 text-sm" placeholder="Email của bạn" type="email"/>
+<button class="absolute right-2 top-1.5 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-[#44483e] dark:text-[#c4c8ba] font-['Manrope'] text-sm tracking-wide">
+                © 2024 Cao Thảo Dược Họ Vương. Gìn giữ tinh hoa y học cổ truyền.
+            </p>
+</div>
+</footer>
+</body></html>
