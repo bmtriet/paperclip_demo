@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Paperclip welcome website scaffold",
   "scripts": {
-    "start": "python3 -m http.server 4173"
+    "start": "python3 -m http.server 4173",
+    "tunnel": "node scripts/open-tunnel.js"
   },
   "keywords": [
     "prototype",
@@ -12,5 +13,8 @@
   ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "localtunnel": "^2.0.2"
+  }
 }
