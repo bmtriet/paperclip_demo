@@ -2,9 +2,36 @@ const taskInput = document.getElementById('taskInput');
 const addTaskBtn = document.getElementById('addTask');
 const taskList = document.getElementById('taskList');
 
-addTaskBtn.addEventListener('click', () => {
-    const li = document.createElement('li');
-    li.textContent = taskInput.value;
-    taskList.appendChild(li);
-    taskInput.value = '';
-});
+// Load tasks from LocalStorage
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+function renderTasks() {
+    taskList.innerHTML = '';
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span>${task}</span>
+            <button class="delete-btn" onclick="deleteTask(${index})">Delete</button>
+        `;
+        taskList.appendChild(li);
+    });
+}
+
+function addTask() {
+    const task = taskInput.value.trim();
+    if (task) {
+        tasks.push(task);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        taskInput.value = '';
+        renderTasks();
+    }
+}
+
+window.deleteTask = function(index) {
+    tasks.splice(index, 1);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    renderTasks();
+}
+
+addTaskBtn.addEventListener('click', addTask);
+renderTasks();
