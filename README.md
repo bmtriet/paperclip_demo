@@ -1,21 +1,21 @@
-# Task Management Prototype
+# Paperclip Welcome Website Scaffold
 
-A lightweight, static task management prototype.
+This repository contains a static website scaffold for the Paperclip prototype.
 
-## Features
-- Add tasks to a list.
+## Included Pages
+- `index.html` - welcome landing page
+- `features.html` - feature overview
+- `pricing.html` - pricing placeholder
+- `contact.html` - frontend-only contact form
 
-## Development / Local Run
-1. Open `index.html` in your web browser.
+## Shared Assets
+- `assets/css/main.css`
+- `assets/js/main.js`
 
-## Deployment
-This is a static web application. It can be deployed to any static site hosting provider, such as:
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3 / CloudFront
+## Run Locally
+1. From repo root, run `npm run start`.
+2. Open `http://localhost:4173`.
 
-To deploy, simply upload the root directory contents (`index.html`, `style.css`, `app.js`).
-
-## Next Steps
-- Awaiting deployment target (environment configuration) to generate the final test link.
+## Notes
+- This is intentionally a prototype scaffold with no backend dependencies.
+- All pages use shared navigation and layout styling for faster iteration.

@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Management Prototype - Phú Đồng Nai</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paperclip Demo | Welcome</title>
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
-    <div id="app">
-        <h1>Task Manager</h1>
-        <div class="input-group">
-            <input type="text" id="taskInput" placeholder="New Task">
-            <button id="addTask">Add</button>
-        </div>
-        <ul id="taskList"></ul>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Paperclip Demo</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="features.html" data-nav="features">Features</a></li>
+          <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
+          <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <script src="app.js"></script>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">Prototype</p>
+      <h1>Welcome to the Paperclip Website Prototype</h1>
+      <p class="hero-copy">
+        This scaffold is built for fast iteration, stakeholder review, and clean handoff to production engineering.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="features.html">Explore Features</a>
+        <a class="btn secondary" href="contact.html">Request a Demo</a>
+      </div>
+    </section>
+
+    <section class="overview container" aria-labelledby="overview-title">
+      <h2 id="overview-title">What Is Included</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Clear Information Architecture</h3>
+          <p>Core journeys are scaffolded across landing, features, pricing, and contact pages.</p>
+        </article>
+        <article class="card">
+          <h3>Shared Assets</h3>
+          <p>Reusable CSS and JavaScript reduce duplication and simplify future migration.</p>
+        </article>
+        <article class="card">
+          <h3>Prototype Labeling</h3>
+          <p>Persistent prototype messaging prevents confusion with production-ready software.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>Paperclip Demo Prototype</p>
+      <p>&copy; <span id="year"></span> Paperclip</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

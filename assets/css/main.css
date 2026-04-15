@@ -1,0 +1,250 @@
+:root {
+  --bg: #f6f8ff;
+  --surface: #ffffff;
+  --ink: #11213f;
+  --muted: #516184;
+  --line: #d9e1f0;
+  --accent: #1e66f5;
+  --accent-ink: #ffffff;
+  --highlight: #e7efff;
+  --shadow: 0 12px 28px rgba(11, 29, 74, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #f7f9ff 0%, #eef3ff 100%);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+.nav-wrap {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active {
+  color: var(--ink);
+  background: var(--highlight);
+}
+
+.hero {
+  padding: 72px 0 48px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: #4c63a4;
+  font-weight: 700;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.hero-copy,
+.page-intro {
+  margin: 0;
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn.primary:hover,
+.btn.primary:focus-visible {
+  background: #1552cc;
+}
+
+.btn.secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.overview,
+.page-content {
+  padding: 12px 0 56px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.featured-tier {
+  border-color: #bed0ff;
+  background: #f4f8ff;
+}
+
+.price {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.price span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact-shell {
+  margin-top: 20px;
+  max-width: 700px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #c8d3eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible,
+.btn:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid #87a8ff;
+  outline-offset: 2px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.footer-wrap {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paperclip Demo | Contact</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Paperclip Demo</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="features.html" data-nav="features">Features</a></li>
+          <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
+          <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <p class="eyebrow">Prototype</p>
+    <h1>Contact Us</h1>
+    <p class="page-intro">Frontend-only lead capture form for prototype walkthroughs.</p>
+
+    <section class="contact-shell" aria-label="Contact form">
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+
+        <label for="email">Work Email</label>
+        <input id="email" name="email" type="email" placeholder="jane@company.com" required>
+
+        <label for="message">How can we help?</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your use case." required></textarea>
+
+        <button type="submit" class="btn primary">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>Paperclip Demo Prototype</p>
+      <p>&copy; <span id="year"></span> Paperclip</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
