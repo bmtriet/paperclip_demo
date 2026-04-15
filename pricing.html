@@ -7,9 +7,13 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body data-page="pricing">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">Paperclip Demo</a>
+      <a class="brand" href="index.html" aria-label="Paperclip Demo home">
+        <span class="brand-name">Paperclip Demo</span>
+        <span class="brand-meta">Prototype v1</span>
+      </a>
       <nav aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="index.html" data-nav="home">Home</a></li>
@@ -21,27 +25,127 @@
     </div>
   </header>
 
-  <main class="container page-content">
-    <p class="eyebrow">Prototype</p>
-    <h1>Pricing Scaffold</h1>
-    <p class="page-intro">Use these tiers as placeholders while final pricing strategy is refined.</p>
+  <main id="main" class="page-shell">
+    <section class="hero container">
+      <div class="hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Commercial structure</p>
+          <h1>Frame pricing as a rollout choice, not just a number.</h1>
+          <p class="section-intro">
+            This page keeps the commercial story simple: start with a pilot, scale to a team plan, and reserve enterprise for governed rollout.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="contact.html">Talk through the options</a>
+            <a class="btn secondary" href="features.html">Review features first</a>
+          </div>
+        </div>
 
-    <section class="grid" aria-label="Pricing tiers">
-      <article class="card">
-        <h2>Starter</h2>
-        <p class="price">$19<span>/month</span></p>
-        <p>Designed for small teams validating initial workflows.</p>
-      </article>
-      <article class="card featured-tier">
-        <h2>Growth</h2>
-        <p class="price">$49<span>/month</span></p>
-        <p>Best for cross-functional teams coordinating multiple milestones.</p>
-      </article>
-      <article class="card">
-        <h2>Enterprise</h2>
-        <p class="price">Custom</p>
-        <p>For organizations requiring advanced governance and support controls.</p>
-      </article>
+        <aside class="hero-panel reveal" aria-label="Pricing summary">
+          <div class="signal-card">
+            <div class="signal-title">Commercial intent</div>
+            <ul class="signal-list">
+              <li>Anchor the pricing page around value and support depth.</li>
+              <li>Keep the recommended option visually central.</li>
+              <li>Make escalation to sales feel natural, not forced.</li>
+            </ul>
+          </div>
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>3</strong>
+              <span>Commercial tiers</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Recommended plan</span>
+            </div>
+            <div class="stat">
+              <strong>0</strong>
+              <span>Unclear placeholders</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section container reveal" aria-labelledby="tiers-title">
+      <div class="section-title">
+        <p class="section-kicker">Plan tiers</p>
+        <h2 id="tiers-title">Each tier communicates who it is for and what level of support it unlocks.</h2>
+        <p class="section-intro">
+          The goal is not to lock final pricing here. The goal is to show how the product might be packaged when the business model is finalized.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card">
+          <span class="price-label">Pilot</span>
+          <h3>Validation</h3>
+          <div class="price-value">Custom</div>
+          <p class="price-copy">Best for stakeholders validating fit, messaging, and the first production workflow.</p>
+          <ul class="checklist">
+            <li>Focused scope</li>
+            <li>Prototype review access</li>
+            <li>Fast feedback loop</li>
+          </ul>
+        </article>
+
+        <article class="price-card featured">
+          <span class="price-label">Recommended</span>
+          <h3>Team</h3>
+          <div class="price-value">Scale</div>
+          <p class="price-copy">Built for cross-functional teams that need repeatable use, clearer ownership, and more support.</p>
+          <ul class="checklist">
+            <li>Shared workspace patterns</li>
+            <li>Stronger onboarding flow</li>
+            <li>Priority support path</li>
+          </ul>
+        </article>
+
+        <article class="price-card">
+          <span class="price-label">Enterprise</span>
+          <h3>Governance</h3>
+          <div class="price-value">Custom</div>
+          <p class="price-copy">For organizations that need controls, coordination, and rollout support across multiple teams.</p>
+          <ul class="checklist">
+            <li>Implementation review</li>
+            <li>Admin and access planning</li>
+            <li>Escalation management</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" aria-labelledby="pricing-notes-title">
+      <div class="section-title">
+        <p class="section-kicker">Pricing notes</p>
+        <h2 id="pricing-notes-title">The page should answer the commercial question in the same visual language as the rest of the prototype.</h2>
+        <p class="section-intro">
+          Keep the comparison lightweight, scannable, and action-oriented so the page supports decision-making instead of slowing it down.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card" data-tone="accent">
+          <h3>One main recommendation</h3>
+          <p>Use one plan highlight to keep the page focused and reduce decision fatigue.</p>
+        </article>
+        <article class="card">
+          <h3>Clear support ladder</h3>
+          <p>Describe how support changes across tiers so the page feels credible and easy to compare.</p>
+        </article>
+        <article class="card">
+          <h3>Conversion path</h3>
+          <p>Route questions to contact instead of hiding the next step behind a wall of copy.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container callout reveal" aria-label="Pricing page call to action">
+      <div>
+        <p class="section-kicker">Need a walkthrough?</p>
+        <h2>Use the contact page as the final step in the prototype journey.</h2>
+      </div>
+      <a class="btn primary" href="contact.html">Open contact</a>
     </section>
   </main>
 

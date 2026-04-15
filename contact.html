@@ -7,9 +7,13 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">Paperclip Demo</a>
+      <a class="brand" href="index.html" aria-label="Paperclip Demo home">
+        <span class="brand-name">Paperclip Demo</span>
+        <span class="brand-meta">Prototype v1</span>
+      </a>
       <nav aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="index.html" data-nav="home">Home</a></li>
@@ -21,24 +25,101 @@
     </div>
   </header>
 
-  <main class="container page-content">
-    <p class="eyebrow">Prototype</p>
-    <h1>Contact Us</h1>
-    <p class="page-intro">Frontend-only lead capture form for prototype walkthroughs.</p>
+  <main id="main" class="page-shell">
+    <section class="hero container">
+      <div class="hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Prototype feedback</p>
+          <h1>Use one focused form to capture demos, feedback, and rollout questions.</h1>
+          <p class="section-intro">
+            This page is intentionally simple so the user has one clear next action after reviewing the prototype direction.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact-form">Open the form</a>
+            <a class="btn secondary" href="index.html">Return home</a>
+          </div>
+        </div>
 
-    <section class="contact-shell" aria-label="Contact form">
-      <form class="contact-form" action="#" method="post">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+        <aside class="hero-panel reveal" aria-label="Contact summary">
+          <div class="signal-card">
+            <div class="signal-title">What to send</div>
+            <ul class="signal-list">
+              <li>Prototype feedback and visual direction notes.</li>
+              <li>Demo requests from stakeholders or engineers.</li>
+              <li>Questions about scope, rollout, or pricing intent.</li>
+            </ul>
+          </div>
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>3</strong>
+              <span>Primary request types</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Form entry point</span>
+            </div>
+            <div class="stat">
+              <strong>0</strong>
+              <span>Extra navigation noise</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-        <label for="email">Work Email</label>
-        <input id="email" name="email" type="email" placeholder="jane@company.com" required>
+    <section class="contact-grid container reveal" aria-labelledby="contact-heading">
+      <div class="contact-panel" id="contact-form">
+        <p class="section-kicker">Contact form</p>
+        <h2 id="contact-heading">Start the review conversation.</h2>
+        <p class="section-intro">
+          This form is frontend-only in the prototype. It exists to validate the shape of the intake flow before backend work starts.
+        </p>
 
-        <label for="message">How can we help?</label>
-        <textarea id="message" name="message" rows="5" placeholder="Tell us about your use case." required></textarea>
+        <form class="contact-form" action="#" method="post">
+          <div class="field-group">
+            <label for="name">Name</label>
+            <input class="field" id="name" name="name" type="text" placeholder="Jane Doe" required>
+          </div>
 
-        <button type="submit" class="btn primary">Submit</button>
-      </form>
+          <div class="field-group">
+            <label for="email">Work email</label>
+            <input class="field" id="email" name="email" type="email" placeholder="jane@company.com" required>
+          </div>
+
+          <div class="field-group">
+            <label for="topic">What do you want to discuss?</label>
+            <input class="field" id="topic" name="topic" type="text" placeholder="Prototype review, demo request, pricing question" required>
+          </div>
+
+          <div class="field-group">
+            <label for="message">Notes</label>
+            <textarea class="field" id="message" name="message" rows="6" placeholder="Tell us what you noticed, what needs to change, or what should be clarified." required></textarea>
+          </div>
+
+          <button type="submit" class="btn primary">Submit request</button>
+        </form>
+      </div>
+
+      <div class="aside-stack">
+        <section class="info-box">
+          <h3>Expected response</h3>
+          <p>The prototype should make it obvious that follow-up happens after the user submits context, not before.</p>
+        </section>
+
+        <section class="info-box">
+          <h3>Review checklist</h3>
+          <ul class="checklist">
+            <li>Does the page structure feel complete?</li>
+            <li>Is the visual direction distinct enough from a default SaaS theme?</li>
+            <li>Is the CTA sequence obvious on mobile and desktop?</li>
+          </ul>
+        </section>
+
+        <section class="info-box">
+          <h3>Routing note</h3>
+          <p>If the contact request needs commercial discussion, route it back through the pricing page flow first.</p>
+        </section>
+      </div>
     </section>
   </main>
 

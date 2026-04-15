@@ -7,9 +7,13 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body data-page="features">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">Paperclip Demo</a>
+      <a class="brand" href="index.html" aria-label="Paperclip Demo home">
+        <span class="brand-name">Paperclip Demo</span>
+        <span class="brand-meta">Prototype v1</span>
+      </a>
       <nav aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="index.html" data-nav="home">Home</a></li>
@@ -21,24 +25,137 @@
     </div>
   </header>
 
-  <main class="container page-content">
-    <p class="eyebrow">Prototype</p>
-    <h1>Feature Overview</h1>
-    <p class="page-intro">A starting point for showcasing the product direction and value story.</p>
+  <main id="main" class="page-shell">
+    <section class="hero container">
+      <div class="hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Feature architecture</p>
+          <h1>Structure the core workflows around clarity, state, and handoff.</h1>
+          <p class="section-intro">
+            The feature page explains how the product is organized and why the prototype supports a faster review loop for design and engineering.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="pricing.html">See commercial structure</a>
+            <a class="btn secondary" href="index.html">Back to overview</a>
+          </div>
+        </div>
 
-    <section class="grid" aria-label="Feature cards">
-      <article class="card">
-        <h2>Guided Task Flows</h2>
-        <p>Present key user journeys with concise steps and clear calls-to-action.</p>
-      </article>
-      <article class="card">
-        <h2>Progress Visibility</h2>
-        <p>Introduce metrics and status markers for teams tracking delivery in real time.</p>
-      </article>
-      <article class="card">
-        <h2>Lightweight Collaboration</h2>
-        <p>Model thread updates and ownership handoffs without backend dependencies.</p>
-      </article>
+        <aside class="hero-panel reveal" aria-label="Feature summary">
+          <div class="signal-card">
+            <div class="signal-title">Feature principles</div>
+            <ul class="signal-list">
+              <li>Show the workflow before showing the toolset.</li>
+              <li>Keep every section tied to a clear user decision.</li>
+              <li>Prefer concise proof points over decorative filler.</li>
+            </ul>
+          </div>
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>4</strong>
+              <span>Capability pillars</span>
+            </div>
+            <div class="stat">
+              <strong>2</strong>
+              <span>Review states to explain</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Primary handoff pattern</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section container reveal" aria-labelledby="pillars-title">
+      <div class="section-title">
+        <p class="section-kicker">Capability pillars</p>
+        <h2 id="pillars-title">The prototype highlights the mechanics that make the product feel usable.</h2>
+        <p class="section-intro">
+          The feature set is intentionally compact so reviewers can understand the interaction model and the value story at a glance.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card" data-tone="accent">
+          <h3>Guided task flows</h3>
+          <p>Each journey is framed with a clear starting point, a visible next action, and a low-friction end state.</p>
+        </article>
+        <article class="card">
+          <h3>Status visibility</h3>
+          <p>Progress, ownership, and milestones are surfaced early so teams can scan the page without reading every line.</p>
+        </article>
+        <article class="card">
+          <h3>Lightweight collaboration</h3>
+          <p>The design assumes handoff, comments, and shared context without requiring a heavy admin experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" aria-labelledby="workflow-title">
+      <div class="section-title">
+        <p class="section-kicker">Interaction model</p>
+        <h2 id="workflow-title">The page hierarchy matches how a stakeholder will review the product.</h2>
+        <p class="section-intro">
+          Start with the promise, move through the operating model, then end on the decision that matters most.
+        </p>
+      </div>
+
+      <div class="route-grid">
+        <article class="route-card">
+          <div class="route-index">01</div>
+          <h3>Orient</h3>
+          <p>Use the hero to explain what the prototype is trying to prove and why the page exists.</p>
+        </article>
+        <article class="route-card">
+          <div class="route-index">02</div>
+          <h3>Assess</h3>
+          <p>Use the capability cards to show the structure behind the experience and the product’s distinct value.</p>
+        </article>
+        <article class="route-card">
+          <div class="route-index">03</div>
+          <h3>Decide</h3>
+          <p>Use the CTA and contact path to gather feedback, next steps, or a request for a deeper review.</p>
+        </article>
+        <article class="route-card">
+          <div class="route-index">04</div>
+          <h3>Extend</h3>
+          <p>Keep the component patterns reusable so new pages can be added without changing the system.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" aria-labelledby="handoff-title">
+      <div class="section-title">
+        <p class="section-kicker">Handoff notes</p>
+        <h2 id="handoff-title">Engineering gets simple rules instead of a vague aesthetic direction.</h2>
+        <p class="section-intro">
+          The page is deliberately component-driven: shared cards, shared CTAs, shared spacing, and a single motion pattern.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Spacing</h3>
+          <p>Use generous section padding, consistent card radius, and a tighter rhythm inside supporting copy blocks.</p>
+        </article>
+        <article class="card">
+          <h3>Motion</h3>
+          <p>Reveal sections once as they enter the viewport and keep the motion subtle enough to avoid distraction.</p>
+        </article>
+        <article class="card">
+          <h3>States</h3>
+          <p>Navigation, focus, and CTA states should stay obvious so the page remains readable and accessible.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container callout reveal" aria-label="Feature page call to action">
+      <div>
+        <p class="section-kicker">Move next</p>
+        <h2>Review the pricing structure to see how the prototype frames commercial intent.</h2>
+      </div>
+      <a class="btn primary" href="pricing.html">Open pricing</a>
     </section>
   </main>
 

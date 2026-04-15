@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paperclip Demo | Welcome</title>
+  <title>Paperclip Demo | Prototype v1</title>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">Paperclip Demo</a>
+      <a class="brand" href="index.html" aria-label="Paperclip Demo home">
+        <span class="brand-name">Paperclip Demo</span>
+        <span class="brand-meta">Prototype v1</span>
+      </a>
       <nav aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="index.html" data-nav="home">Home</a></li>
@@ -21,35 +25,132 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" class="page-shell">
     <section class="hero container">
-      <p class="eyebrow">Prototype</p>
-      <h1>Welcome to the Paperclip Website Prototype</h1>
-      <p class="hero-copy">
-        This scaffold is built for fast iteration, stakeholder review, and clean handoff to production engineering.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="features.html">Explore Features</a>
-        <a class="btn secondary" href="contact.html">Request a Demo</a>
+      <div class="hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Prototype direction</p>
+          <h1>Define the product with a calmer, more confident page system.</h1>
+          <p class="section-intro">
+            This v1 establishes the visual language, page hierarchy, and conversion flow for a lightweight SaaS prototype.
+            The site now reads as a product story instead of a scaffold.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="features.html">Review feature structure</a>
+            <a class="btn secondary" href="contact.html">Request prototype review</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Prototype summary">
+          <div class="signal-card">
+            <div class="signal-title">Visual direction</div>
+            <ul class="signal-list">
+              <li>Warm neutral base with teal and amber accents.</li>
+              <li>Editorial typography with stronger hierarchy and spacing.</li>
+              <li>Glass-like cards, rounded surfaces, and clear CTA contrast.</li>
+            </ul>
+          </div>
+          <div class="stat-grid" aria-label="Prototype metrics">
+            <div class="stat">
+              <strong>4</strong>
+              <span>Core pages in the v1 IA</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Primary CTA path per page</span>
+            </div>
+            <div class="stat">
+              <strong>3</strong>
+              <span>Design pillars to keep consistent</span>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="overview container" aria-labelledby="overview-title">
-      <h2 id="overview-title">What Is Included</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Clear Information Architecture</h3>
-          <p>Core journeys are scaffolded across landing, features, pricing, and contact pages.</p>
+    <section class="section container reveal" aria-labelledby="direction-title">
+      <div class="section-title">
+        <p class="section-kicker">What this prototype should prove</p>
+        <h2 id="direction-title">The page needs to feel like an intentional product, not a placeholder website.</h2>
+        <p class="section-intro">
+          The copy and layout are organized to help stakeholders evaluate hierarchy, positioning, and the story arc before engineering invests in production polish.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card" data-tone="accent">
+          <h3>Primary story</h3>
+          <p>Explain the product value in the hero, support it with proof points, and move directly into the next action.</p>
         </article>
         <article class="card">
-          <h3>Shared Assets</h3>
-          <p>Reusable CSS and JavaScript reduce duplication and simplify future migration.</p>
+          <h3>Reusable structure</h3>
+          <p>Each page uses the same header, section rhythm, card treatment, and CTA pattern so implementation stays predictable.</p>
         </article>
         <article class="card">
-          <h3>Prototype Labeling</h3>
-          <p>Persistent prototype messaging prevents confusion with production-ready software.</p>
+          <h3>Decision support</h3>
+          <p>The page structure surfaces the minimum information needed to review scope, fit, and next steps without extra noise.</p>
         </article>
       </div>
+    </section>
+
+    <section class="section container reveal" aria-labelledby="structure-title">
+      <div class="section-title">
+        <p class="section-kicker">Page structure</p>
+        <h2 id="structure-title">The IA is now explicit and page-specific.</h2>
+        <p class="section-intro">
+          Each page has a distinct role in the journey, which keeps the prototype easy to review and easy to extend.
+        </p>
+      </div>
+
+      <div class="route-grid">
+        <article class="route-card">
+          <div class="route-index">01</div>
+          <h3>Home</h3>
+          <p>Establish the product direction, visual language, and the overall prototype narrative.</p>
+        </article>
+        <article class="route-card">
+          <div class="route-index">02</div>
+          <h3>Features</h3>
+          <p>Show the operating model, key capabilities, and the reasons the structure matters.</p>
+        </article>
+        <article class="route-card">
+          <div class="route-index">03</div>
+          <h3>Pricing</h3>
+          <p>Present the commercial shape as three tiers with different levels of support and rollout depth.</p>
+        </article>
+        <article class="route-card">
+          <div class="route-index">04</div>
+          <h3>Contact</h3>
+          <p>Collect prototype feedback, demo requests, and rollout questions in one focused form.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" aria-labelledby="system-title">
+      <div class="section-title">
+        <p class="section-kicker">Visual system</p>
+        <h2 id="system-title">The interface leans editorial, grounded, and product-forward.</h2>
+        <p class="section-intro">
+          The palette, spacing, and typography were chosen to avoid generic SaaS blue. The result is calmer, more premium, and easier to scan.
+        </p>
+      </div>
+
+      <ul class="pill-list" aria-label="Design tokens">
+        <li class="pill">Warm parchment background</li>
+        <li class="pill">Deep ink typography</li>
+        <li class="pill">Teal primary accent</li>
+        <li class="pill">Amber highlight for emphasis</li>
+        <li class="pill">Large radius cards</li>
+        <li class="pill">Soft glass surfaces</li>
+      </ul>
+    </section>
+
+    <section class="container callout reveal" aria-label="Prototype call to action">
+      <div>
+        <p class="section-kicker">Next review step</p>
+        <h2>Confirm this direction, then tighten the content for the final prototype pass.</h2>
+      </div>
+      <a class="btn primary" href="contact.html">Start review conversation</a>
     </section>
   </main>
 
